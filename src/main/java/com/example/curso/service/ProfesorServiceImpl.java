@@ -9,12 +9,11 @@ import com.example.curso.dao.IProfesorDao;
 import com.example.curso.entity.Profesor;
 
 @Service("profesorService")
-public class ProfesorServiceImpl implements IProfesorService {
+public class ProfesorServiceImpl {
 	
 	@Autowired
 	private IProfesorDao profesorDao;
 
-	@Override
 	public List<Profesor> findAllProfessors() {
 		return (List<Profesor>) profesorDao.findAll();
 	}
